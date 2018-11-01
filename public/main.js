@@ -8,7 +8,11 @@ let addOnePointForTeamOne = () => {
 }
 
 let subtractOnePointForTeamOne = () => {
-  --count
+  if (count > 0) {
+    --count
+  } else {
+    count = 0
+  }
   let ptagCount = document.querySelector('p.score-team-one')
   ptagCount.textContent = count
 }
@@ -20,7 +24,11 @@ let addOnePointForTeamTwo = () => {
 }
 
 let subtractOnePointForTeamTwo = () => {
-  --countForTeamTwo
+  if (countForTeamTwo > 0) {
+    --countForTeamTwo
+  } else {
+    countForTeamTwo = 0
+  }
   let ptagCount = document.querySelector('p.score-team-two')
   ptagCount.textContent = countForTeamTwo
 }
@@ -30,6 +38,13 @@ let updateTeamOneName = () => {
   let newName = teamOneNameInput.value
   let teamOneName = document.querySelector('h2.team-one-name')
   teamOneName.textContent = newName
+}
+
+let updateTeamTwoName = () => {
+  let teamOneNameInput = document.querySelector('#new-team-two-name')
+  let newName = teamOneNameInput.value
+  let teamTwoName = document.querySelector('h2.team-two-name')
+  teamTwoName.textContent = newName
 }
 
 const main = () => {
@@ -54,6 +69,10 @@ const main = () => {
     'button.update-team-one-name'
   )
   updateTeamOneNameButton.addEventListener('click', updateTeamOneName)
+  let updateTeamTwoNameButton = document.querySelector(
+    'button.update-team-two-name'
+  )
+  updateTeamTwoNameButton.addEventListener('click', updateTeamTwoName)
 }
 
 document.addEventListener('DOMContentLoaded', main)
