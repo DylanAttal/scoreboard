@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scoreboard</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scoreboard</title>
+  <link rel="stylesheet" href="/screen.css">
+</head>
+
+<body>
+  <h1>My Scoreboard</h1>
+  <main>
+    <section>
+      <h2 class="team-one-name">Team 1</h2>
+      <p class="score-team-one">0</p>
+      <ul>
+        <li>
+          <label for="new-team-one-name">Update Team 1 Name</label>
+          <input id="new-team-one-name" type="text" />
+          <button class="update-team-one-name">Update</button>
+        </li>
+        <li>
+          <label>Update Team 1 Score</label>
+          <button class="add-for-team-one">Add 1</button>
+          <button class="subtract-for-team-one">Subtract 1</button>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 class="team-two-name">Team 2</h2>
+      <p class="score-team-two">0</p>
+      <ul>
+        <li>
+          <label for="new-team-two-name">Update Team 2 Name</label>
+          <input id="new-team-two-name" type="text" />
+          <button class="update-team-two-name">Update</button>
+        </li>
+        <li>
+          <label>Update Team 2 Score</label>
+          <button class="add-for-team-two">Add 1</button>
+          <button class="subtract-for-team-two">Subtract 1</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="/main.js" charset="utf-8"></script>
+</body>
+
 </html>
